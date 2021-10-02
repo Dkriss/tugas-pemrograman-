@@ -1,52 +1,43 @@
+// CATATAN 
+    /* Iki aku lak njajal nggawe rata-rata dam, lah kadang aku jek kebingungan lek sing nggawe cara biasa karo sing cara loop+array, iki tak duduhi garapanku. Gurung mari garapanku,
+        sepurane lek jek cekeremes uelek wkwkwkwk. Tulung duduhno sing nggawe cara manual biasa karo sing loop+array. Sing garapanku ojo dihapus, copas trus dekek ning ndisor ae 
+        :v SUWUN DAAAAMMMM
+        
+// IKI GARAPANKU 
+
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
-
-void main(){
-    int nilai;
-    int nim;
+int main(){
+	int pemrogramandasar, kalkulus, pti, orkom, nim;
     char namalengkap[50];
-    int matkul;
+    float rata = (pemrogramandasar+kalkulus+pti+orkom)/4;
 
-    printf("\t\t\t\t\t====Daftar Penilaian Mahasiswa====\n");
+    printf("\t\t\t\t\t====Program Cek Kelulusan Nilai Mahasiswa====\n");
     printf("\t\t\t\t=======Masukkan Nilai Dengan Tepat======\n\n\n");
     printf("Masukkan Nama Anda: ");
         scanf("%s", &namalengkap);
-    printf("\n\nMasukkan NIM Anda: ");
-        scanf("%i", &nim);
-    printf("\n\nDaftar Mata Kuliah: ");
-    printf("\n\t1. Kalkulus\n\t2. Fisika\n\t3. Matematika Diskrit\n\t4. Pancasila\n\t5. Bahasa Indonesia\n\t6. Agama");
-    printf("\nPilih Mata Kuliah Anda: ");
-        scanf("%i", &matkul);
-
-        switch(matkul){
-            case 1:
-                printf("\n1. Kalkulus");
-                break;
-            case 2:
-                printf("\n2. Fisika");
-                break;
-            case 3:
-                printf("\n3. Matematika Diskrit");
-                break;
-            case 4:
-                printf("\n4. Pancasila");
-                break;
-            case 5:
-                printf("\n5. Bahasa Indonesia");
-                break;
-            case 6:
-                printf("\n6. Agama");
-                break;
-        }
-
-    printf("\n\nMasukkan Nilai Anda: ");
-        scanf("%i", &nilai);
-
-    if(nilai > 70 && nilai <= 100){
-        printf("Nilai Anda sudah memenuhi KKM");
-        printf("\nAnda tidak perlu mengulang Ujian\n\n");
-    }else{
-        printf("Nilai Anda belum memenuhi KKM");
-        printf("\nAnda dimohon untuk mengulang kembali ujian\n\n");
-    }
-} 
+	printf("Masukkan NIM Anda: ");
+		scanf("%d", &nim);
+	printf("\nMasukkan nilai mata kuliah Pemrograman Dasar Anda: ");
+		scanf("%d", &pemrogramandasar);
+	printf("Masukkan nilai mata kuliah Kalkulus Anda: ");
+		scanf("%d", &kalkulus);
+	printf("Masukkan nilai mata kuliah PTI Anda: ");
+		scanf("%d", &pti);
+	printf("Masukkan nilai mata kuliah Organisasi Komputer Anda: ");
+		scanf("%d", &orkom);
+        scanf("%f", &rata);
+	
+	if((pemrogramandasar+kalkulus+pti+orkom)/4 >= 75){
+		printf("Nilai Rata-rata Anda Adalah: ", rata;
+		printf("\nSelamat Anda LULUS");
+	}else{
+		printf("Nilai Rata-rata Anda Adalah: ", rata;
+		printf("\nAnda Belum lulus, dimohon untuk mengulang lagi");	
+	} 
+	
+	return 0;	
+}
+        
